@@ -1,0 +1,55 @@
+{
+    "Equipment": {
+        "Weapon": {
+            "Iron Shortsword": {
+                "Level Requirement": 1,
+                "Attack Power": 3,
+                "Strength Bonus": 5,
+                "Agility Bonus": 1,
+                "Intelligence Bonus": 0,
+                "Wisdom Bonus": 0,
+                "Luck Bonus": 0
+            },
+            "Iron Claymore": {
+                "Level Requirement": 1,
+                "Attack Power": 10,
+                "Strength Bonus": 8,
+                "Agility Bonus": -2,
+                "Intelligence Bonus": -2,
+                "Wisdom Bonus": 0,
+                "Luck Bonus": 1
+            }
+        }
+    },
+    "Players": {
+        "Registered": {
+            "Jordy": {
+                "Level": 1,
+                "Health": 10,
+                "EXP": 10,
+                "Weapon": "Iron Claymore",
+                "Attack": 11,
+                "Strength": 13,
+                "Agility": 3,
+                "Intelligence": 3,
+                "Wisdom": 15,
+                "Luck": 6
+            }
+        }
+    },
+    "Enemies": {
+        "Goblin": {
+            "Weak Goblin": {
+                "Level": 1,
+                "Health": 0,
+                "Weapon": "Copper Dagger",
+                "Attack": 2,
+                "Strength": 6,
+                "Agility": 7,
+                "Intelligence": 1,
+                "Wisdom": 1,
+                "Luck": 8
+            }
+        }
+    }
+}
