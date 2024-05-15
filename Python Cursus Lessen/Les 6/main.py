@@ -12,6 +12,9 @@
 # etc.
 # Doe dit tot 10 sterretjes.
 
+for i in range(11):
+    print(i * "*")
+
 # Laat je driehoek nu ook weer terug lopen.
 # *
 # * *
@@ -19,6 +22,11 @@
 # * *
 # *
 # Hint: gebruik twee for loops
+
+for i in range(11):
+    j = 10
+    num = j - i
+    print(num * "*")
 
 # Voor een extra uitdaging bij deze opdracht kan je de driehoek ook zo maken (doe dit pas als je de rest af hebt. Let op: is erg lastig):
 #   *
@@ -36,3 +44,12 @@
 # Check of jouw max overeenkomt met de max van de python functie max()
 
 lijst = [1,3,4,1,123,0,5,1,32,1,1,3,5,1,12,3,101,10]
+num = 0
+for i in lijst:
+    if i > num:
+        num = i
+    else:
+        pass
+
+print(num)
+print(max(lijst))

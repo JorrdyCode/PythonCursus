@@ -9,6 +9,17 @@ from hidden import shuffle, is_sorted, secret_number
 # hidden.py geeft jullie een geheim nummer genaamd `secret_number`, dit is iedere keer dat je het runt anders. Schrijf een programma met een while loop welke de gebruiker 3 pogingen geeft om het getal te raden. Als de gebruiker het getal niet goed raad vertel dan of het groter of kleiner is dan het geheime getal
 # hint gebruik de if,elif,else constructie die we eerder hebben geleerd
 
+guess = 1
+while True:
+    answer = int(input("Welk getal? "))
+    if answer == secret_number:
+        print("Goed geraden!")
+        break
+    elif guess == 3:
+        print("Fout geraden, het antwoord was ", secret_number)
+        break
+    guess += 1
+
 
 
 
@@ -39,6 +50,47 @@ from hidden import shuffle, is_sorted, secret_number
 
 # > print nu de statistieken over deze cijfers die je net hebt berekend
 
+grades = list()
+
+while True:
+    studentnumber = int(input("Geef het cijfer van je studenten, typ 0 om te eindigen."))
+    if studentnumber == 0:
+        break
+    if studentnumber > 0:
+        grades.append(studentnumber)
+
+length = 0
+for number in grades:
+    length += 1  
+
+sum = 0
+for number in grades:
+    sum += number
+average = sum / length
+
+voldoendes = 0
+minimum = 10
+maximum = 0
+
+for number in grades:
+    
+    if number > 6:
+        voldoendes += 1
+    if number > maximum:
+        maximum = number
+    if number < minimum:
+        minimum = number
+
+print(grades)
+print(length)  
+print(average)
+print(voldoendes)
+print(maximum)
+print(minimum)
+
+        
+
+
 #      _            __  __ _
 #  ___| |__  _   _ / _|/ _| | ___
 # / __| '_ \| | | | |_| |_| |/ _ \
@@ -61,3 +113,9 @@ from hidden import shuffle, is_sorted, secret_number
 # `shuffle(lijst)` > deze verandert de bestaande lijst
 #
 # Om te kijken hoe het sorteren gaat kun je tussendoor je lijst printen
+
+while not is_sorted(grades):
+    print(grades)
+    shuffle(grades)
+
+print(grades)

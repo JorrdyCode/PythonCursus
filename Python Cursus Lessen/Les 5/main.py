@@ -53,23 +53,23 @@ print(onze_lijst[-1])
 
 # < FUNCTIE HIER > 
 
-def findLargestNumber(list):
-    number = 0
-    for num in list:
-        if num > number:
-            list.insert(num-1, 0)
-            number = num
-            list.insert(num+1, 0)
-        else:
-            pass
-    return number
+def findLargestNumberPosition(lists):
+    largestNumber = max(lists)
+    position = lists.index(largestNumber)
+    return position
 
-print(onze_lijst)
-print(findLargestNumber(onze_lijst))
 # > Plaats voor en na dit getal een 0, check daarna of dit goed gegaan is
 # Dus als 10 het grootste getal is wordt de lijst [..., 0, 10, 0, ...]
 
 # < CODE HIER >
+
+position = findLargestNumberPosition(onze_lijst)
+print(position)
+onze_lijst.insert(position, 0)
+onze_lijst.insert(position+2, 0)
+print(onze_lijst)
+print(onze_lijst[position])
+
 
 # > Zoek het grooste nummer deze keer in de lijst door de lijst te sorteren en naar het laatste element te kijken - hiervoor kun je een functie (sort) gebruiken. Vergelijk dit met het grootste getal dat je uit de max functie terugkrijgt
 
@@ -116,24 +116,24 @@ wachtwoorden = [
 # > Voor extra uitdaging: maak hier functies van/voor
 
 
-def inlog(gebruikersnummer, wachtwoord):
-    if wachtwoorden[gebruikersnummer] == wachtwoord:
-        print("Inlog gelukt!")
-        keuze = input("Wil je je wachtwoord aanpassen? (y/n)")
-        if keuze == "y":
-            nieuwWachtwoord = input("Wat wil je dat je nieuwe wachtwoord is? ")
-            wachtwoordAanpassen(gebruikersnummer, nieuwWachtwoord)
-        else:
-            print("Fijne dag nog!")
-    else:
-        print("Inlog mislukt, probeer het opnieuw!")
+# def inlog(gebruikersnummer, wachtwoord):
+#     if wachtwoorden[gebruikersnummer] == wachtwoord:
+#         print("Inlog gelukt!")
+#         keuze = input("Wil je je wachtwoord aanpassen? (y/n) ")
+#         if keuze == "y":
+#             nieuwWachtwoord = input("Wat wil je dat je nieuwe wachtwoord is? ")
+#             wachtwoordAanpassen(gebruikersnummer, nieuwWachtwoord)
+#         else:
+#             print("Fijne dag nog!")
+#     else:
+#         print("Inlog mislukt, probeer het opnieuw!")
         
-def wachtwoordAanpassen(gebruikersnummer, nieuwWachtwoord):
-    wachtwoorden[gebruikersnummer] = nieuwWachtwoord
-    print("Wachtwoord succesvol verandert!")
-    print(wachtwoorden[gebruikersnummer])
+# def wachtwoordAanpassen(gebruikersnummer, nieuwWachtwoord):
+#     wachtwoorden[gebruikersnummer] = nieuwWachtwoord
+#     print("Wachtwoord succesvol verandert!")
+#     print(wachtwoorden[gebruikersnummer])
 
 
-gebruikersnummer = int(input("Wat is je gebruikersnummer? "))
-wachtwoord = input("Wat is je wachtwoord? ")
-inlog(gebruikersnummer, wachtwoord)
+# gebruikersnummer = int(input("Wat is je gebruikersnummer? "))
+# wachtwoord = input("Wat is je wachtwoord? ")
+# inlog(gebruikersnummer, wachtwoord)
